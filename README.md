@@ -79,6 +79,7 @@ Based on the error level, we can set notifications and search criteria (e.g. sho
 
 ## User information
 You can associate all events that you send to Streply with the users of your application.
+
 `Streply.User((string) userId, (string) userName = null, (object) params = {})`
 
 Example:
