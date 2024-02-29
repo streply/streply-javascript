@@ -21,7 +21,7 @@
     }
   },
   "dependencies": {
-    "@streply/browser": "file:/Users/norbert.bylak/Private/streply/packages/browser"
+    "@streply/browser": "*"
   },
   "devDependencies": {
     "vue": "^3.4.21"
