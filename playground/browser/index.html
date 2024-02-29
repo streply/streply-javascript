@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <title>Playground</title>
+    <script src="../../packages/browser/dist/browser.umd.js"></script>
+    <script>
+        Streply.Init({
+            projectId: 'YOUR_PROJECT_ID',
+            server: 'https://api.streply.com',
+            token: 'YOUR_TOKEN',
+        });
+        // or
+        // Streply.Init({
+        //     dns: 'https://YOUR_TOKEN@api.streply.com/YOUR_PROJECT_ID'
+        // });
+    </script>
+</head>
+<body>
+<button onclick="triggerError()">Trigger error!</button>
+
+<script>
+    function triggerError() {
+        throw new Error('This is an error');
+    }
+</script>
+</body>
+</html>

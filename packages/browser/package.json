@@ -1,0 +1,26 @@
+{
+  "name": "@streply/browser",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/browser.umd.cjs",
+  "module": "./dist/browser.es.js",
+  "scripts": {
+    "lint": "eslint .",
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/browser.es.js",
+      "require": "./dist/browser.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "@streply/vue",
+  "version": "1.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "types": "./dist/types/index.d.ts",
+  "main": "./dist/vue.umd.cjs",
+  "module": "./dist/vue.es.js",
+  "scripts": {
+    "lint": "eslint .",
+    "dev": "vite",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "preview": "vite preview"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/vue.es.js",
+      "require": "./dist/vue.umd.cjs"
+    }
+  },
+  "dependencies": {
+    "@streply/browser": "file:/Users/norbert.bylak/Private/streply/packages/browser"
+  },
+  "devDependencies": {
+    "vue": "^3.4.21"
+  },
+  "peerDependencies": {
+    "vue": "3.x"
+  }
+}
