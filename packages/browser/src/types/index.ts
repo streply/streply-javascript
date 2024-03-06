@@ -29,7 +29,7 @@ export type UserConfig = {
 }
 
 type InitConfig = {
-    technology?: 'js/browser' | 'js/vue',
+    technology?: 'js/browser' | 'js/vue' | 'js/react',
 }
 
 export type Config = {

@@ -1141,6 +1141,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@streply/react@workspace:packages/react":
+  version: 0.0.0-use.local
+  resolution: "@streply/react@workspace:packages/react"
+  dependencies:
+    "@streply/browser": "npm:*"
+  languageName: unknown
+  linkType: soft
+
 "@streply/vue@workspace:packages/vue":
   version: 0.0.0-use.local
   resolution: "@streply/vue@workspace:packages/vue"

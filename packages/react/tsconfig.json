@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": [
+      "node",
+    ],
+    "declarationDir": "dist/types"
+  },
+  "include": [
+    "./src/**/*.ts",
+    "../../.dts/*.ts"
+  ],
+  "exclude": [
+    "./dist/*"
+  ]
+}

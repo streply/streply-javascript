@@ -1,5 +1,5 @@
 {
-  "name": "@streply/vue",
+  "name": "@streply/react",
   "version": "1.0.0",
   "type": "module",
   "files": [
@@ -15,18 +15,12 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/vue.mjs",
+      "import": "./dist/react.mjs",
       "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
   },
   "dependencies": {
     "@streply/browser": "*"
-  },
-  "devDependencies": {
-    "vue": "^3.4.21"
-  },
-  "peerDependencies": {
-    "vue": "3.x"
   }
 }
