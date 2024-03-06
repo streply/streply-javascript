@@ -16,9 +16,7 @@ import { init } from '@streply/vue';
 const app = createApp(App);
 
 init(app, {
-    projectId: 'YOUR_PROJECT_ID',
-    server: 'https://api.streply.com',
-    token: 'YOUR_TOKEN',
+    dsn: '_YOUR_DSN_',
 });
 
 app.mount('#app')

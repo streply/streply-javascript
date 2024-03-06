@@ -3,23 +3,24 @@
   "version": "1.0.0",
   "type": "module",
   "files": [
-    "dist"
+    "dist/*",
+    "README.md"
   ],
-  "types": "./dist/types/index.d.ts",
-  "main": "./dist/browser.umd.cjs",
-  "module": "./dist/browser.es.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "lint": "eslint .",
     "dev": "vite",
-    "build": "vite build && tsc --emitDeclarationOnly",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "exports": {
     ".": {
-      "import": "./dist/browser.es.js",
-      "require": "./dist/browser.umd.cjs"
-    }
+      "import": "./dist/browser.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./package.json": "./package.json"
   },
+  "sideEffects": false,
   "dependencies": {
     "crypto-js": "^4.2.0"
   }

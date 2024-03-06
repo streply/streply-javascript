@@ -5,13 +5,12 @@
     "types": [
       "node",
     ],
-    "declarationDir": "dist/types"
   },
   "include": [
-    "src/**/*.ts",
-    "../../.dts/**/*.ts"
+    "./src/**/*.ts",
+    "../../.dts/*.ts"
   ],
   "exclude": [
-    "*/dist"
+    "./dist/*"
   ]
 }

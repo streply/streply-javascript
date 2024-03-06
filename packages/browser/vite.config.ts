@@ -1,13 +1,20 @@
 import {resolve} from 'path'
 import {defineConfig} from 'vite'
+import dts from 'vite-plugin-dts'
 
 export default defineConfig({
     build: {
-        target: 'esnext',
+        emptyOutDir: false,
         lib: {
             entry: resolve(__dirname, 'src/index.ts'),
-            name: 'browser',
-            fileName: (format) => `browser.${format}.js`,
+            formats: ['es'],
+            fileName: () => `browser.mjs`,
         },
-    }
+    },
+    plugins: [
+        dts({
+            root: __dirname,
+            tsconfigPath: resolve(__dirname, './tsconfig.json'),
+        }),
+    ]
 });

@@ -3,22 +3,22 @@
   "version": "1.0.0",
   "type": "module",
   "files": [
-    "dist"
+    "dist/*",
+    "README.md"
   ],
   "types": "./dist/types/index.d.ts",
-  "main": "./dist/vue.umd.cjs",
-  "module": "./dist/vue.es.js",
   "scripts": {
     "lint": "eslint .",
     "dev": "vite",
-    "build": "vite build && tsc --emitDeclarationOnly",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "exports": {
     ".": {
-      "import": "./dist/vue.es.js",
-      "require": "./dist/vue.umd.cjs"
-    }
+      "import": "./dist/vue.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json"
   },
   "dependencies": {
     "@streply/browser": "*"
