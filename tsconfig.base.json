@@ -2,23 +2,28 @@
   "extends": "@tsconfig/strictest/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
-    "module": "esnext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "types": [
+      "node"
+    ],
     "lib": [
       "esnext",
       "dom"
     ],
-    "moduleResolution": "Bundler",
-    "strict": true,
     "removeComments": true,
+    "resolveJsonModule": true,
     "allowJs": true,
-    "declaration": true,
-    "strictNullChecks": true,
-    "esModuleInterop": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "noUnusedLocals": true,
-    "skipLibCheck": true,
-    "sourceMap": false,
-    "resolveJsonModule": true
-  }
+    "paths": {
+      "@typings/*": [
+        "../../.dts/*"
+      ],
+    }
+  },
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/bin"
+  ]
 }

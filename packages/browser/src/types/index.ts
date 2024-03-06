@@ -24,21 +24,12 @@ export type StreplyInterface = {
     Init: (params: UserConfig, config: InitConfig) => void,
 }
 
-
-interface InitParamsWithDNS {
-    dns: string;
+export type UserConfig = {
+    dsn: string;
 }
-
-interface InitParamsWithoutDNS {
-    token: string;
-    server: string;
-    projectId: string;
-}
-
-export type UserConfig = InitParamsWithDNS | InitParamsWithoutDNS;
 
 type InitConfig = {
-    technology?: 'js/browser' | 'js/vue',
+    technology?: 'js/browser' | 'js/vue' | 'js/react',
 }
 
 export type Config = {

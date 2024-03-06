@@ -1,12 +1,12 @@
 {
-  "name": "@streply/browser",
+  "name": "@streply/react",
   "version": "1.0.0",
   "type": "module",
   "files": [
     "dist/*",
     "README.md"
   ],
-  "types": "./dist/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint .",
     "dev": "vite",
@@ -15,13 +15,12 @@
   },
   "exports": {
     ".": {
-      "import": "./dist/browser.mjs",
-      "types": "./dist/src/index.d.ts"
+      "import": "./dist/react.mjs",
+      "types": "./dist/index.d.ts"
     },
     "./package.json": "./package.json"
   },
-  "sideEffects": false,
   "dependencies": {
-    "crypto-js": "^4.2.0"
+    "@streply/browser": "*"
   }
 }
