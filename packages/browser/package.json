@@ -1,11 +1,12 @@
 {
   "name": "@streply/browser",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "dist/*",
     "README.md"
   ],
+  "main": "./dist/browser.mjs",
   "types": "./dist/src/index.d.ts",
   "scripts": {
     "lint": "eslint .",

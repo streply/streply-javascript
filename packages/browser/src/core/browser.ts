@@ -302,7 +302,7 @@ export const Streply: StreplyInterface = {
             .match(/https:\/\/([^@]+)@([^/]+)\/(\d+)/) || [];
 
         if (!token || !server || !projectId) {
-            throw new Error('Invalid DNS');
+            throw new Error('Invalid DSN');
         }
 
         Streply.__server = `https://${server}`;

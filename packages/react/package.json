@@ -6,6 +6,7 @@
     "dist/*",
     "README.md"
   ],
+  "main": "./dist/react.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint .",
