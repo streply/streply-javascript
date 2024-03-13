@@ -1,11 +1,31 @@
 # Streply JavaScript SDK
 
 ## Load Streply SDK
+
 The first step is loading the script with SDK.
+
 ```html
 <script src="https://app.streply.com/js/%token%.min.js"></script>
 ```
+
 You can find the TOKEN of the project in the Projects tab of your Streply account.
+
+Alternatively, you can also install the SDK via a package manager:
+
+```bash
+npm install --save @streply/browser
+```
+
+or YARN:
+
+```bash
+yarn add @streply/browser
+```
+
+## Using a framework?
+
+- [Vue.js](/packages/vue/README.md)
+- [React](/packages/react/README.md)
 
 ## Configuration
 ### Turn on debug mode if you want to see logs in the browser console.
