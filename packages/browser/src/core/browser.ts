@@ -297,7 +297,7 @@ export const Streply: StreplyInterface = {
         Streply.API.Send('error', String(exception), params, level, fileName, lineNumber, exception.name);
     },
 
-    Init: (params, {technology}) => {
+    init: (params) => {
         const [, token, server, projectId] = params.dsn
             .match(/https:\/\/([^@]+)@([^/]+)\/(\d+)/) || [];
 
@@ -309,8 +309,8 @@ export const Streply: StreplyInterface = {
         Streply.__token = token;
         Streply.__projectId = projectId;
 
-        if (technology) {
-            Streply.__apiClientTechnology = technology;
+        if (params.technology) {
+            Streply.__apiClientTechnology = params.technology;
         }
 
         Streply.__startTime = Streply.Helpers.microTime();

@@ -21,14 +21,11 @@ export type StreplyInterface = {
     Activity: (message: string, params: Record<string, string>) => void,
     Error: (message: string, params: Record<string, string>, level: string) => void,
     Exception: (exception: unknown, params: Record<string, string>, level: string) => void,
-    Init: (params: UserConfig, config: InitConfig) => void,
+    init: (params: UserConfig) => void,
 }
 
 export type UserConfig = {
     dsn: string;
-}
-
-type InitConfig = {
     technology?: 'js/browser' | 'js/vue' | 'js/react',
 }
 

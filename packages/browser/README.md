@@ -9,7 +9,5 @@ import Streply from '@streply/browser';
 
 Streply.Init({
     dsn: '_YOUR_DSN_',
-}, {
-    ...YOUR_OPTIONS
 });
 ```

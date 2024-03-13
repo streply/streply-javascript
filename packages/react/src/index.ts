@@ -1,7 +1,7 @@
 import Streply, { UserConfig } from '@streply/browser';
 
 const init = (options: UserConfig) => {
-    Streply.Init(options, { technology: 'js/react' });
+    Streply.init({ technology: 'js/react', ...options });
 }
 
 export { init, Streply };
