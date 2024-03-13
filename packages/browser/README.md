@@ -7,7 +7,7 @@ To use this SDK, call `Init()` as early in your application as possible.
 ```javascript
 import Streply from '@streply/browser';
 
-Streply.Init({
+Streply.init({
     dsn: '_YOUR_DSN_',
 });
 ```
