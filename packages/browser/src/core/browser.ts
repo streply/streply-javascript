@@ -182,7 +182,7 @@ export const Streply: StreplyInterface = {
             return Intl.DateTimeFormat().resolvedOptions().timeZone
         },
         URL: function () {
-            return document.URL || null
+            return document.URL || ''
         },
         scheme: function () {
             return Streply.Request.__url.protocol
