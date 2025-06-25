@@ -149,7 +149,7 @@ export const Streply: StreplyInterface = {
     },
 
     Request: {
-        __url: new URL(document.URL || ''),
+        __url: new URL(document ? document.URL : ''),
         __date: new Date(),
 
         date: function () {
@@ -172,23 +172,31 @@ export const Streply: StreplyInterface = {
             return formatted[0] + '/' + formatted[1] + '/' + formatted[2] + ' ' + formatted[3] + ':' + formatted[4] + ':' + formatted[5];
         },
         port: function () {
-            if (Streply.Request.__url.port.length === 0) {
-                return 80;
+            if(Streply.Request) {
+                if (Streply.Request.__url.port.length === 0) {
+                    return 80;
+                }
+
+                return Streply.Request.__url.port || '';
             }
 
-            return Streply.Request.__url.port;
+            return '';
         },
         dateTimeZone: function () {
             return Intl.DateTimeFormat().resolvedOptions().timeZone
         },
         URL: function () {
-            return document.URL || ''
+            if(document) {
+                return document.URL || ''
+            }
+
+            return ''
         },
         scheme: function () {
-            return Streply.Request.__url.protocol
+            return Streply.Request.__url.protocol || ''
         },
         userAgent: function () {
-            return window.navigator.userAgent
+            return window.navigator.userAgent || ''
         }
     },
 
