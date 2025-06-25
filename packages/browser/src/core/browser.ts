@@ -149,7 +149,7 @@ export const Streply: StreplyInterface = {
     },
 
     Request: {
-        __url: new URL(document.URL),
+        __url: new URL(document.URL || ''),
         __date: new Date(),
 
         date: function () {
@@ -182,7 +182,7 @@ export const Streply: StreplyInterface = {
             return Intl.DateTimeFormat().resolvedOptions().timeZone
         },
         URL: function () {
-            return document.URL
+            return document.URL || null
         },
         scheme: function () {
             return Streply.Request.__url.protocol
