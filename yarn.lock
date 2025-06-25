@@ -702,7 +702,7 @@
   integrity sha512-+Fj43pSMwJs4KRrH/938Uf+uAELIgVBmQzg/q1YG10djyfA3TnrU8N8XzqCh/okZdszqBQTZf96idMfE5lnwTA==
 
 "@streply/browser@*", "@streply/browser@file:/Users/michalmolenda/Sites/streply/streply-javascript/packages/browser":
-  version "1.0.5"
+  version "1.0.6"
   resolved "file:packages/browser"
   dependencies:
     crypto-js "^4.2.0"
