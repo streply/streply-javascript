@@ -149,7 +149,7 @@ export const Streply: StreplyInterface = {
     },
 
     Request: {
-        __url: new URL(''),
+        __url: null,
         __date: new Date(),
 
         date: function () {
@@ -172,6 +172,10 @@ export const Streply: StreplyInterface = {
             return formatted[0] + '/' + formatted[1] + '/' + formatted[2] + ' ' + formatted[3] + ':' + formatted[4] + ':' + formatted[5];
         },
         port: function () {
+            if(Streply.Request.__url === null) {
+                return '';
+            }
+
             if(Streply.Request) {
                 if (Streply.Request.__url.port.length === 0) {
                     return 80;
