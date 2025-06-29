@@ -68,7 +68,7 @@ type Session = {
 }
 
 type Request = {
-    __url: URL,
+    __url: URL | null,
     __date: Date,
     date: () => string
     port: () => number | string
