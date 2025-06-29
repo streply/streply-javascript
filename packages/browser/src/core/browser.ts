@@ -2,8 +2,6 @@ import {ErrorMessage, StreplyInterface} from "../types";
 import md5 from 'crypto-js/md5';
 import packageJson from '../../package.json';
 
-declare const document: Document | undefined;
-
 export const Streply: StreplyInterface = {
     Level: {Critical: 'critical', High: 'high', Normal: 'normal', Low: 'low'},
 
@@ -151,7 +149,7 @@ export const Streply: StreplyInterface = {
     },
 
     Request: {
-        __url: new URL(document ? document.URL : ''),
+        __url: new URL(''),
         __date: new Date(),
 
         date: function () {
@@ -188,7 +186,7 @@ export const Streply: StreplyInterface = {
             return Intl.DateTimeFormat().resolvedOptions().timeZone
         },
         URL: function () {
-            return document ? document.URL : ''
+            return '';
         },
         scheme: function () {
             return Streply.Request.__url.protocol || ''
