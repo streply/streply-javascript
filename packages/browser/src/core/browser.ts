@@ -190,9 +190,17 @@ export const Streply: StreplyInterface = {
             return Intl.DateTimeFormat().resolvedOptions().timeZone
         },
         URL: function () {
-            return '';
+            if(Streply.Request.__url === null) {
+                return '';
+            }
+
+            return Streply.Request.__url.href || '';
         },
         scheme: function () {
+            if(Streply.Request.__url === null) {
+                return '';
+            }
+
             return Streply.Request.__url.protocol || ''
         },
         userAgent: function () {
